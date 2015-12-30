@@ -8,11 +8,16 @@ public class Main {
 
         //-->Creacion de una lista String ------------------
         List<String> listString = new ArrayList<>();
-        listString.add("A");
+        listString.add("Z");
         listString.add("B");
         listString.add("C");
-        listString.add("D");
+        listString.add("J");
+        listString.add("H");
+        listString.add("E");
+        listString.add("A");
         //--------------------------------------------------
+        System.out.println("---- LISTA STRINGS----");
+        System.out.println(listString);
 
         //-->Creacion de una lista de objetos --------------
         List<Persona> listPersona = new ArrayList<>();
@@ -27,6 +32,11 @@ public class Main {
         listPersona.add(per3);
         listPersona.add(per4);
         //--------------------------------------------------
+
+        System.out.println("---- FOR ----");
+        for (int i = 0; i < listPersona.size() ; i++) {
+            System.out.println(listPersona.get(i).getNombre());
+        }
 
         //-->Forma de recorrer una lista con un FOREACH ----
         System.out.println("---- FOREACH ----");
@@ -43,8 +53,19 @@ public class Main {
         }while (iterator.hasNext());
         //--------------------------------------------------
 
+        //-->Ordenamiento de una lista de Strings
+        System.out.println("---- ORDENAMIENTO STRINGS----");
+        Collections.sort(listString, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareToIgnoreCase(o2);
+            }
+        });
+        System.out.println(listString);
+
+
         //-->Ordenamiento de una Lista de objetos por el nombre ---
-        System.out.println("---- ORDENAMIENTO ----");
+        System.out.println("---- ORDENAMIENTO OBJETOS----");
         Collections.sort(listPersona, new Comparator<Persona>() {
             @Override
             public int compare(Persona o1, Persona o2) {

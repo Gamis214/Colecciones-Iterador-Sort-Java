@@ -1,8 +1,6 @@
 package com.gamis214;
 
-/**
- * Created by Gamis on 12/30/2015.
- */
+
 public class Persona {
     String nombre,apellido;
     long telefono;
