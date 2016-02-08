@@ -91,4 +91,21 @@ Collections.sort(listPersona, new Comparator<Persona>() {
 });
 ```
 
+###Eliminacion
+Podemos eliminar datos de una lista ya se por medio de una busqueda for, foreach, iterator o directamente.
+* Conociendo la posicion del elemento
+```java
+a.remove(1);
+```
+* Conociendo el contendio de tipo **int**
+```java
+a.remove(new Integer(1));
+```
+* Conociendo el String a eliminar
+```java
+a.remove("Pepe");
+```
+
+
+
 
